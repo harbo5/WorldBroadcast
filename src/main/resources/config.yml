@@ -1,0 +1,37 @@
+#   Format:
+#
+#   messages:
+#     1: (Any arbitrary number will work, it's just so that it's a list of them.)
+#       type: repeat (Two types, repeat and time. Repeat broadcasts every x seconds. Time executes at a specific time of day.)
+#       repeatTime: 100 (time in seconds for the message to repeat)
+#       intialDelay: 0 (Only used if you want to stagger messages. For example, with five messages, you could repeat each every 300 seconds, delay them in increments of sixty (0, 60, 120, 180, 240), and you'd have a different message for every minute on a five minute cycle)
+#       world: Narnia (The world you want the message sent to)
+#       message: (The message, add a new line in the same format to broadcast additional lines)
+#         - "This is the broadcast"
+#         - "It supports multiple lines and &4color codes"
+#     2:
+#       type: time
+#       executeTime: 57600 (Time of day, on the server's computer, to run in seconds. i.e. 4pm would be 57600)
+#       world: Narnia
+#       message:
+#         - "This is the broadcast"
+#         - "It supports multiple lines and &4color codes"
+#         - "It also can do specific worlds!"
+
+messages:
+   1:
+     type: repeat
+     repeatTime: 600
+     intialDelay: 0
+     world: Narnia
+     message:
+       - "This is the broadcast"
+       - "It supports multiple lines and &4color codes"
+   2:
+     type: time
+     executeTime: 57600
+     world: Narnia
+     message:
+       - "This is the broadcast"
+       - "It supports multiple lines and &4color codes"
+       - "It also can do specific worlds!"
